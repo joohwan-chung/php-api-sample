@@ -1,5 +1,5 @@
 # 사용된 프레임워크 및 언어 버전
-- [codeigniter](https://codeigniter.com/)
+- [codeigniter](https://codeigniter.com/) (4.4.3)
 - php 버전 : 7.4.33
 
 # 참고사항
