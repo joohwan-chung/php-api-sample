@@ -1,0 +1,392 @@
+ERROR - 2023-10-31 06:16:55 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'ci_rest_api', 3306, '', 0)
+#1 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/app/Controllers/StudentApiController.php(28): CodeIgniter\BaseModel->save(Array)
+#9 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\StudentApiController->create()
+#10 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentApiController))
+#11 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#13 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/imac-ton...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#3 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#4 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#5 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#6 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#7 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/app/Controllers/StudentApiController.php(28): CodeIgniter\BaseModel->save(Array)
+#8 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\StudentApiController->create()
+#9 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentApiController))
+#10 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#12 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/imac-ton...')
+#13 {main}
+CRITICAL - 2023-10-31 06:16:55 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `student` (`name`, `age`, `country`) VALUES (:name:, :age:, :country:)', [...], false)
+ 3 SYSTEMPATH/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 4 SYSTEMPATH/BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 5 SYSTEMPATH/Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 6 SYSTEMPATH/BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 7 APPPATH/Controllers/StudentApiController.php(28): CodeIgniter\BaseModel->save([...])
+ 8 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\StudentApiController->create()
+ 9 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentApiController))
+10 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/public/index.php')
+ERROR - 2023-10-31 06:19:02 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'ci_rest_api', 3306, '', 0)
+#1 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/app/Controllers/StudentApiController.php(28): CodeIgniter\BaseModel->save(Array)
+#9 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\StudentApiController->create()
+#10 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentApiController))
+#11 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#13 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/imac-ton...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#3 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#4 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#5 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#6 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#7 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/app/Controllers/StudentApiController.php(28): CodeIgniter\BaseModel->save(Array)
+#8 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\StudentApiController->create()
+#9 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentApiController))
+#10 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#12 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/imac-ton...')
+#13 {main}
+CRITICAL - 2023-10-31 06:19:02 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `student` (`name`, `age`, `country`) VALUES (:name:, :age:, :country:)', [...], false)
+ 3 SYSTEMPATH/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 4 SYSTEMPATH/BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 5 SYSTEMPATH/Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 6 SYSTEMPATH/BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 7 APPPATH/Controllers/StudentApiController.php(28): CodeIgniter\BaseModel->save([...])
+ 8 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\StudentApiController->create()
+ 9 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentApiController))
+10 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/public/index.php')
+ERROR - 2023-10-31 06:21:35 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'ci_rest_api', 3306, '', 0)
+#1 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/app/Controllers/StudentApiController.php(28): CodeIgniter\BaseModel->save(Array)
+#9 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\StudentApiController->create()
+#10 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentApiController))
+#11 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#13 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/imac-ton...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#3 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#4 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#5 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#6 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#7 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/app/Controllers/StudentApiController.php(28): CodeIgniter\BaseModel->save(Array)
+#8 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\StudentApiController->create()
+#9 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentApiController))
+#10 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#12 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/imac-ton...')
+#13 {main}
+CRITICAL - 2023-10-31 06:21:35 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `student` (`name`, `age`, `country`) VALUES (:name:, :age:, :country:)', [...], false)
+ 3 SYSTEMPATH/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 4 SYSTEMPATH/BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 5 SYSTEMPATH/Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 6 SYSTEMPATH/BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 7 APPPATH/Controllers/StudentApiController.php(28): CodeIgniter\BaseModel->save([...])
+ 8 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\StudentApiController->create()
+ 9 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentApiController))
+10 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/public/index.php')
+ERROR - 2023-10-31 06:26:00 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'ci_rest_api', 3306, '', 0)
+#1 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/app/Controllers/StudentApiController.php(28): CodeIgniter\BaseModel->save(Array)
+#9 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\StudentApiController->create()
+#10 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentApiController))
+#11 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#13 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/imac-ton...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#3 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#4 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#5 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#6 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#7 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/app/Controllers/StudentApiController.php(28): CodeIgniter\BaseModel->save(Array)
+#8 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\StudentApiController->create()
+#9 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentApiController))
+#10 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#12 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/imac-ton...')
+#13 {main}
+CRITICAL - 2023-10-31 06:26:00 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `student` (`name`, `age`, `country`) VALUES (:name:, :age:, :country:)', [...], false)
+ 3 SYSTEMPATH/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 4 SYSTEMPATH/BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 5 SYSTEMPATH/Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 6 SYSTEMPATH/BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 7 APPPATH/Controllers/StudentApiController.php(28): CodeIgniter\BaseModel->save([...])
+ 8 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\StudentApiController->create()
+ 9 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentApiController))
+10 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/public/index.php')
+ERROR - 2023-10-31 06:33:35 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'ci_rest_api', 3306, '', 0)
+#1 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/app/Controllers/StudentApiController.php(28): CodeIgniter\BaseModel->save(Array)
+#9 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\StudentApiController->create()
+#10 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentApiController))
+#11 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#13 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/imac-ton...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#3 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#4 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#5 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#6 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#7 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/app/Controllers/StudentApiController.php(28): CodeIgniter\BaseModel->save(Array)
+#8 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\StudentApiController->create()
+#9 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentApiController))
+#10 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#12 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/imac-ton...')
+#13 {main}
+CRITICAL - 2023-10-31 06:33:35 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `student` (`name`, `age`, `country`) VALUES (:name:, :age:, :country:)', [...], false)
+ 3 SYSTEMPATH/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 4 SYSTEMPATH/BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 5 SYSTEMPATH/Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 6 SYSTEMPATH/BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 7 APPPATH/Controllers/StudentApiController.php(28): CodeIgniter\BaseModel->save([...])
+ 8 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\StudentApiController->create()
+ 9 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentApiController))
+10 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/public/index.php')
+ERROR - 2023-10-31 06:35:58 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('localhost', 'root', 'root', 'ci_rest_api', 3306, '', 0)
+#1 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/app/Controllers/StudentApiController.php(28): CodeIgniter\BaseModel->save(Array)
+#9 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\StudentApiController->create()
+#10 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentApiController))
+#11 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#13 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/imac-ton...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#3 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#4 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#5 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#6 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#7 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/app/Controllers/StudentApiController.php(28): CodeIgniter\BaseModel->save(Array)
+#8 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\StudentApiController->create()
+#9 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentApiController))
+#10 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#12 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/imac-ton...')
+#13 {main}
+CRITICAL - 2023-10-31 06:35:58 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `student` (`name`, `age`, `country`) VALUES (:name:, :age:, :country:)', [...], false)
+ 3 SYSTEMPATH/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 4 SYSTEMPATH/BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 5 SYSTEMPATH/Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 6 SYSTEMPATH/BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 7 APPPATH/Controllers/StudentApiController.php(28): CodeIgniter\BaseModel->save([...])
+ 8 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\StudentApiController->create()
+ 9 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentApiController))
+10 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/public/index.php')
+ERROR - 2023-10-31 06:38:49 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('localhost', 'root', 'root', 'ci_rest_api', 3306, '', 0)
+#1 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/app/Controllers/StudentApiController.php(28): CodeIgniter\BaseModel->save(Array)
+#9 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\StudentApiController->create()
+#10 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentApiController))
+#11 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#13 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/imac-ton...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#3 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#4 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#5 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#6 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#7 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/app/Controllers/StudentApiController.php(28): CodeIgniter\BaseModel->save(Array)
+#8 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\StudentApiController->create()
+#9 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentApiController))
+#10 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#12 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/imac-ton...')
+#13 {main}
+CRITICAL - 2023-10-31 06:38:49 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `student` (`name`, `age`, `country`) VALUES (:name:, :age:, :country:)', [...], false)
+ 3 SYSTEMPATH/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 4 SYSTEMPATH/BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 5 SYSTEMPATH/Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 6 SYSTEMPATH/BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 7 APPPATH/Controllers/StudentApiController.php(28): CodeIgniter\BaseModel->save([...])
+ 8 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\StudentApiController->create()
+ 9 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentApiController))
+10 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/public/index.php')
+ERROR - 2023-10-31 06:40:59 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'ci_rest_api', 3306, '', 0)
+#1 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/app/Controllers/StudentApiController.php(28): CodeIgniter\BaseModel->save(Array)
+#9 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\StudentApiController->create()
+#10 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentApiController))
+#11 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#13 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/imac-ton...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#3 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#4 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#5 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#6 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#7 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/app/Controllers/StudentApiController.php(28): CodeIgniter\BaseModel->save(Array)
+#8 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\StudentApiController->create()
+#9 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentApiController))
+#10 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#12 /Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/imac-ton...')
+#13 {main}
+CRITICAL - 2023-10-31 06:40:59 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `student` (`name`, `age`, `country`) VALUES (:name:, :age:, :country:)', [...], false)
+ 3 SYSTEMPATH/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 4 SYSTEMPATH/BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 5 SYSTEMPATH/Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 6 SYSTEMPATH/BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 7 APPPATH/Controllers/StudentApiController.php(28): CodeIgniter\BaseModel->save([...])
+ 8 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\StudentApiController->create()
+ 9 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentApiController))
+10 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/imac-tong/Documents/joohwan/php-api-sample/appstarter/public/index.php')
